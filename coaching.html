@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coaching Message</title>
+     <!-------------------------------------->
+    <!----------Start Css Here--------------->
+    <!-------------------------------------->
+    <style>
+        :root {
+            --page-bg: #e9f0fb;
+            --box-border: #d8d8d8;
+            --header-grad-1: #bfe5e6;
+            --header-grad-2: #f6fbfb;
+            --title-color: #333;
+            --text-red: #8b0000;
+            --arrow-bg: #f39b10;
+            --arrow-bg-hover: #de8b0b;
+            --site-border: #e6e6e6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--page-bg);
+            color: #111;
+        }
+
+        /* =========================
+       ✅ EDUCATION WEBSITE HEADER (FULL RESPONSIVE)
+    ========================== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            width: 100%;
+            background: #ffffff;
+            border-bottom: 1px solid var(--site-border);
+        }
+
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 10px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 220px;
+        }
+
+        .logo img {
+            width: 56px;
+            height: 56px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--site-border);
+            flex: 0 0 auto;
+        }
+
+        .logo-text span {
+            font-weight: 800;
+            letter-spacing: .3px;
+            font-size: 16px;
+            display: block;
+            line-height: 1.15;
+            color: #1f1f1f;
+        }
+
+        .logo-text p {
+            margin: 4px 0 0;
+            font-size: 12px;
+            line-height: 16px;
+            color: #444;
+        }
+
+        /* Desktop Nav */
+        nav {
+            position: relative;
+        }
+
+        #menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        #menu a {
+            text-decoration: none;
+            color: #222;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 8px 6px;
+            border-radius: 8px;
+        }
+
+        #menu a:hover {
+            background: #f3f6ff;
+        }
+
+        /* Hamburger */
+        .menu-btn {
+            display: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            border: 1px solid var(--site-border);
+            background: #fff;
+            cursor: pointer;
+            font-size: 22px;
+            line-height: 1;
+            user-select: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Mobile layout */
+        @media (max-width: 920px) {
+            .header-inner {
+                gap: 10px;
+            }
+
+            .logo-text p {
+                display: none;
+                /* mobile pe address hide (clean) */
+            }
+
+            .menu-btn {
+                display: flex;
+            }
+
+            #menu {
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 52px;
+                background: #fff;
+                border: 1px solid var(--site-border);
+                border-radius: 12px;
+                padding: 10px;
+                min-width: 210px;
+                box-shadow: 0 14px 40px rgba(0, 0, 0, 0.10);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 6px;
+            }
+
+            #menu.show {
+                display: flex;
+            }
+
+            #menu a {
+                padding: 10px 10px;
+                font-size: 14px;
+            }
+        }
+
+        /* =========================
+       ✅ PAGE WRAP
+    ========================== */
+        .wrap {
+            width: 100%;
+            padding: 18px 16px 30px;
+        }
+
+        /* =========================
+       ✅ DIRECTOR MESSAGE CARD (FULL RESPONSIVE)
+    ========================== */
+        .card {
+            background: #fff;
+            border: 1px solid var(--box-border);
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .card__header {
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 14px 0 16px;
+            background: linear-gradient(to bottom, var(--header-grad-1) 0%, var(--header-grad-2) 60%, #fff 100%);
+            border-bottom: 1px solid #e6e6e6;
+            gap: 10px;
+        }
+
+        .card__title {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--title-color);
+            line-height: 1.1;
+        }
+
+        /* ✅ Back button responsive (same feel on all screens) */
+        .back-btn {
+            width: 38px;
+            height: 38px;
+            border: none;
+            border-radius: 50%;
+            background: var(--arrow-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            padding: 0;
+            flex: 0 0 auto;
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.18);
+            transition: transform .15s ease, background .15s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--arrow-bg-hover);
+            transform: translateY(-1px);
+        }
+
+        .back-btn:active {
+            transform: translateY(0px) scale(0.98);
+        }
+
+        .back-btn svg {
+            width: 18px;
+            height: 18px;
+            display: block;
+        }
+
+        .card__body {
+            padding: 22px 18px 26px;
+        }
+
+        /* Photo responsive */
+        .photo-wrap {
+            display: flex;
+            justify-content: center;
+            margin: 8px 0 18px;
+        }
+
+        .photo {
+            width: clamp(160px, 22vw, 230px);
+            height: clamp(160px, 22vw, 230px);
+            object-fit: cover;
+            border: 3px solid #2b2b2b;
+            background: #000;
+            display: block;
+        }
+
+        /* Text responsive (nice readable) */
+        .desc {
+            margin: 0;
+            color: var(--text-red);
+            font-size: clamp(15px, 1.35vw, 18px);
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        /* Make card breathe on very large screens (TV) */
+        @media (min-width: 1400px) {
+            .wrap {
+                padding-top: 26px;
+            }
+
+            .card {
+                max-width: 1300px;
+            }
+
+            .card__body {
+                padding: 26px 24px 30px;
+            }
+        }
+
+        /*-----------Footer----------------*/
+        /*=================================*/
+
+        .site-footer {
+            margin-top: 24px;
+            background: linear-gradient(90deg, #2aa7d6 0%, #62b2a9 35%, #8bc34a 100%);
+            position: relative;
+        }
+
+        .footer-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 26px 18px 18px;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr 1.1fr;
+            gap: 22px;
+            align-items: start;
+        }
+
+        /* Title */
+        .footer-title {
+            width: 100%;
+            margin: 0 0 12px;
+            font-size: clamp(22px, 2.2vw, 34px);
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            position: relative;
+            padding: 0 0 10px 0;
+            background: transparent;
+            border: none;
+            cursor: default;
+        }
+
+        .footer-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: min(260px, 100%);
+            height: 4px;
+            background: #0c7a2a;
+            border-radius: 999px;
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.12);
+        }
+
+        .footer-title .chev {
+            font-weight: 900;
+            display: none;
+            /* desktop pe hidden */
+        }
+
+        .footer-card {
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(0, 0, 0, 0.18);
+            border-radius: 10px;
+            padding: 14px;
+            color: #fff;
+        }
+
+        /* Contact text (✅ not all bold) */
+        .contact-name {
+            margin: 0 0 8px;
+            font-weight: 800;
+            /* only name strong */
+            letter-spacing: 0.2px;
+        }
+
+        .contact-lines {
+            margin: 0 0 10px;
+            line-height: 1.55;
+            font-weight: 500;
+            /* normal */
+        }
+
+        .like-us {
+            font-weight: 700;
+            margin: 10px 0 10px;
+        }
+
+        /* ✅ Social icons smaller in all screens */
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .soc {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.20);
+            transition: transform .12s ease;
+        }
+
+        .soc:hover {
+            transform: translateY(-2px);
+        }
+
+        .soc svg {
+            width: 22px;
+            height: 22px;
+            fill: #fff;
+            display: block;
+        }
+
+        .fb {
+            background: #2d63c8;
+        }
+
+        .ig {
+            background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+        }
+
+        .yt {
+            background: #ff1b1b;
+        }
+
+        .x {
+            background: #111;
+        }
+
+        /* Quick links */
+        .links-card {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .quick-link {
+            display: block;
+            padding: 12px 12px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(0, 0, 0, 0.16);
+            color: #fff;
+            font-weight: 800;
+            text-decoration: none;
+            transition: background .12s ease, transform .12s ease;
+        }
+
+        .quick-link:hover {
+            background: rgba(255, 255, 255, 0.16);
+            transform: translateY(-1px);
+        }
+
+        /* Map */
+        .map-card {
+            padding: 10px;
+        }
+
+        .map-card iframe {
+            width: 100%;
+            height: clamp(220px, 22vw, 280px);
+            border: 0;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Scroll to top */
+        .to-top {
+            position: absolute;
+            right: 16px;
+            bottom: 66px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.78);
+            color: #fff;
+            font-size: 20px;
+            font-weight: 900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Bottom bar */
+        .footer-bottom {
+            background: #0b5a8b;
+            border-top: 1px solid rgba(255, 255, 255, 0.20);
+        }
+
+        .bottom-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 12px 18px;
+            color: #fff;
+            font-weight: 800;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .visitor b {
+            color: #ffe600;
+        }
+
+        /* Responsive columns */
+        @media (max-width: 1100px) {
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 740px) {
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            /* ✅ Mobile accordion: titles become clickable + arrow visible */
+            .footer-title {
+                cursor: pointer;
+                margin-bottom: 8px;
+            }
+
+            .footer-title .chev {
+                display: inline-block;
+                margin-left: 6px;
+                transition: transform .15s ease;
+            }
+
+            /* panel animation */
+            .acc-panel {
+                overflow: hidden;
+                max-height: 999px;
+                transition: max-height .22s ease;
+            }
+
+            .acc.collapsed .acc-panel {
+                max-height: 0px;
+                padding-top: 0;
+                padding-bottom: 0;
+                border-width: 0;
+            }
+
+            .acc.collapsed .footer-title .chev {
+                transform: rotate(-90deg);
+            }
+
+            /* a bit smaller icons on very small screens */
+            .soc {
+                width: 40px;
+                height: 40px;
+                border-radius: 12px;
+            }
+
+            .soc svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .to-top {
+                bottom: 76px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ✅ HEADER -->
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <img src="./assets/logo.jpeg" alt="Logo">
+                <div class="logo-text">
+                    <span>CAREER POINT, UKHRA</span>
+                    <p>
+                        SHARDAPALLY, BEHIND-UKHRA ADARSHA HINDI HIGH SCHOOL (H.S.)<br>
+                        PO-UKHRA, DIST-PASCHIM BARDHAMAN (W.B.), PIN-713363
+                    </p>
+                </div>
+            </div>
+
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#achievements">Achievements</a></li>
+                    <li><a href="./fees.html">Fees</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="./contact.html">Help Desk</a></li>
+                </ul>
+
+                <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ✅ DIRECTOR MESSAGE CARD -->
+    <div class="wrap">
+        <div class="card">
+            <div class="card__header">
+                <div class="card__title">Director's Message</div>
+
+                <button class="back-btn" id="goBack" type="button" title="Back to Main Page" aria-label="Back">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M14.5 6L8.5 12L14.5 18" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="card__body">
+                <div class="photo-wrap">
+                    <!-- ✅ director.jpg same folder me hona chahiye -->
+                    <img class="photo" src="director.jpg" alt="Director Photo" />
+                </div>
+
+                <p class="desc">
+                    Education in the true sense is based on the premise that each person finds identity, meaning and
+                    purpose in life.
+                    It calls forth an intrinsic reverence for life and a passionate love for learning. Thus we at DAV
+                    Model School,
+                    Durgapur are committed to providing the young learners a stimulating &amp; purposeful environment
+                    conducive to their moral,
+                    emotional, intellectual &amp; physical development in such a manner that they blossom into
+                    competent, self-reliant, compassionate
+                    &amp; responsible individuals. The curriculum of the school has been developed through strategic
+                    planning and a pragmatic approach
+                    to facilitate an educational experience where high academic standards challenge the students to
+                    reach to their fullest. With
+                    the rapid changes in the global educational scenario, the teacher-student relation has assumed a new
+                    dimension. So, rising to
+                    the demands of the times, every teacher here is a caring educator &amp; every student an engaged
+                    learner. I feel immensely proud
+                    to be at the helm of such an educational institution that has established an impeccable image and
+                    set benchmarks in academic
+                    achievements. In our pursuit of excellence in education, we have been fortunate to have the
+                    blessings of the active involvement
+                    &amp; co-operation of all our stakeholders. As we proceed in the enchanting mission of igniting
+                    lives, let me reaffirm that the
+                    mantra of progress here is, we have to be better than what we were yesterday.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ✅ Footer -->
+
+    <footer class="site-footer" id="footer">
+        <div class="footer-inner">
+
+            <!-- CONTACT US -->
+            <section class="footer-col acc" data-acc="contact">
+                <button class="footer-title acc-btn" type="button" aria-expanded="true" aria-controls="acc-contact">
+                    CONTACT US <span class="chev">↓</span>
+                </button>
+
+                <div class="footer-card acc-panel" id="acc-contact">
+                    <p class="contact-name">CAREER POINT, UKHRA</p>
+
+                    <p class="contact-lines">
+                        SHARDAPALLY, BEHIND-UKHRA ADARSHA HINDI HIGH SCHOOL (H.S.)<br>
+                        PO-UKHRA, DIST-PASCHIM BARDHAMAN (W.B.), PIN-713363
+                    </p>
+
+                    <p class="contact-lines">
+                        <b>Contact:</b> 0343-2563500 / 2564711<br>
+                        <b>E-Mail Id:</b> careerpointukhra@gmail.com
+                    </p>
+
+                    <div class="social-block">
+                        <div class="like-us">Like Us on:</div>
+
+                        <div class="social-icons">
+                            <a class="soc fb" href="https://facebook.com" target="_blank" rel="noopener"
+                                aria-label="Facebook">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M14 8.5V7c0-.83.67-1.5 1.5-1.5H17V3h-2.2C12.7 3 11 4.7 11 6.8v1.7H9v3h2V21h3v-9.5h2.5l.5-3H14z" />
+                                </svg>
+                            </a>
+
+                            <a class="soc ig" href="https://instagram.com" target="_blank" rel="noopener"
+                                aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.8 6.2a.9.9 0 1 1-.9.9.9.9 0 0 1 .9-.9z" />
+                                </svg>
+                            </a>
+
+                            <a class="soc yt" href="https://youtube.com" target="_blank" rel="noopener"
+                                aria-label="YouTube">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.9 4.6 12 4.6 12 4.6s-5.9 0-7.5.5A3 3 0 0 0 2.4 7.2 31.5 31.5 0 0 0 2 12a31.5 31.5 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.6.5 7.5.5 7.5.5s5.9 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 22 12a31.5 31.5 0 0 0-.4-4.8zM10 15.5v-7l6 3.5-6 3.5z" />
+                                </svg>
+                            </a>
+
+                            <a class="soc x" href="https://x.com" target="_blank" rel="noopener" aria-label="X">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M18.6 2H21l-6.6 7.6L22 22h-6.2l-4.8-6.2L5.6 22H3l7.2-8.3L2 2h6.3l4.3 5.7L18.6 2zm-1.1 18h1.4L6.4 3.9H4.9L17.5 20z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- QUICK LINKS -->
+            <section class="footer-col acc" data-acc="links">
+                <button class="footer-title acc-btn" type="button" aria-expanded="true" aria-controls="acc-links">
+                    QUICK LINKS <span class="chev">↓</span>
+                </button>
+
+                <div class="footer-card links-card acc-panel" id="acc-links">
+                    <a class="quick-link" href="index.html#about">ABOUT SCHOOL</a>
+                    <a class="quick-link" href="index.html#achievements">ACHIEVEMENT</a>
+                    <a class="quick-link" href="index.html#gallery">PHOTO GALLERY</a>
+                    <a class="quick-link" href="transfer-certificate.html">TRANSFER CERTIFICATE</a>
+                    <a class="quick-link" href="new-voter-form.html">APPLICATION FORM TO BE A NEW VOTER</a>
+                </div>
+            </section>
+
+            <!-- LOCATION MAP -->
+            <section class="footer-col acc" data-acc="map">
+                <button class="footer-title acc-btn" type="button" aria-expanded="true" aria-controls="acc-map">
+                    LOCATION MAP <span class="chev">↓</span>
+                </button>
+
+                <!-- ✅ Map fixed: always same (no current location change) -->
+                <div class="footer-card map-card acc-panel" id="acc-map">
+                    <iframe title="Location Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        src="https://maps.google.com/maps?q=Ukhra%20West%20Bengal&t=m&z=14&output=embed"></iframe>
+                </div>
+            </section>
+        </div>
+
+        <!-- ✅ Scroll to top -->
+        <button class="to-top" id="toTop" type="button" aria-label="Scroll to top">↑</button>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+            <div class="bottom-inner">
+                <span>© <span id="year"></span> CAREER POINT, UKHRA. All rights reserved</span>
+                <span class="visitor">| Total Visitor: <b id="visitorCount">846953</b></span>
+            </div>
+        </div>
+    </footer>
+     <!-------------------------------------->
+    <!----------Link with js---------------->
+    <!-------------------------------------->
+    <script>
+        // Mobile menu
+        document.getElementById("menuBtn").addEventListener("click", function () {
+            document.getElementById("menu").classList.toggle("show");
+        });
+
+        // Back button -> index.html
+        document.getElementById("goBack").addEventListener("click", function () {
+            window.location.href = "index.html";
+        });
+
+        // Optional: menu open then click anywhere outside => close
+        document.addEventListener("click", function (e) {
+            const menu = document.getElementById("menu");
+            const btn = document.getElementById("menuBtn");
+            const nav = btn.parentElement;
+            if (window.innerWidth <= 920 && menu.classList.contains("show")) {
+                if (!nav.contains(e.target)) menu.classList.remove("show");
+            }
+        });
+
+
+
+        //------------Footer Start Here-----------------//
+
+        // ✅ Auto Year
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // ✅ Scroll to top
+        document.getElementById("toTop").addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        // ✅ Mobile accordion open/close (only on small screen)
+        const accSections = document.querySelectorAll(".acc");
+
+        function setAccordionDefault() {
+            if (window.innerWidth <= 740) {
+                // default: open first, close others (you can change)
+                accSections.forEach((sec, i) => {
+                    if (i === 0) sec.classList.remove("collapsed");
+                    else sec.classList.add("collapsed");
+                    const btn = sec.querySelector(".acc-btn");
+                    btn.setAttribute("aria-expanded", i === 0 ? "true" : "false");
+                });
+            } else {
+                // desktop: all open
+                accSections.forEach(sec => {
+                    sec.classList.remove("collapsed");
+                    const btn = sec.querySelector(".acc-btn");
+                    btn.setAttribute("aria-expanded", "true");
+                });
+            }
+        }
+
+        setAccordionDefault();
+        window.addEventListener("resize", setAccordionDefault);
+
+        accSections.forEach(sec => {
+            const btn = sec.querySelector(".acc-btn");
+            btn.addEventListener("click", () => {
+                if (window.innerWidth > 740) return; // desktop pe no toggle
+
+                const isCollapsed = sec.classList.toggle("collapsed");
+                btn.setAttribute("aria-expanded", isCollapsed ? "false" : "true");
+            });
+        });
+
+        // ✅ Visitor Count (needs backend)
+        async function loadVisitorCount() {
+            try {
+                const res = await fetch("/api/visitor", { cache: "no-store" });
+                if (!res.ok) throw new Error("no api");
+                const data = await res.json();
+                document.getElementById("visitorCount").textContent = data.count;
+            } catch (e) {
+                // fallback static if no backend
+                document.getElementById("visitorCount").textContent = "846953";
+            }
+        }
+        loadVisitorCount();
+
+
+
+
+
+        //-----------------------------------------------------//
+        //-----------------Auto Count-----------------------//
+
+        const express = require("express");
+        const fs = require("fs");
+        const path = require("path");
+
+        const app = express();
+        const PORT = 3000;
+
+        const DATA_FILE = path.join(__dirname, "visitors.json");
+
+        function readCount() {
+            try {
+                const raw = fs.readFileSync(DATA_FILE, "utf8");
+                const json = JSON.parse(raw);
+                return Number(json.count || 0);
+            } catch {
+                return 0;
+            }
+        }
+
+        function writeCount(count) {
+            fs.writeFileSync(DATA_FILE, JSON.stringify({ count }, null, 2));
+        }
+
+        // serve your website files (put html/css/assets in same folder)
+        app.use(express.static(__dirname));
+
+        app.get("/api/visitor", (req, res) => {
+            let count = readCount();
+            count += 1;                // ✅ every visit increments
+            writeCount(count);
+            res.json({ count });
+        });
+
+        app.listen(PORT, () => {
+            console.log(`Server running: http://localhost:${PORT}`);
+        });
+
+    </script>
+</body>
+</html>

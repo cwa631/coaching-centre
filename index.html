@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Point Ukhra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <!------------------------------------------>
+    <!-------Header Seaction------->
+    <!------------------------------------------>
+    <header>
+        <div class="logo">
+            <img src="./assets/logo.jpeg" alt="Logo">
+            <div class="logo-text">
+                <span>CAREER POINT, UKHRA</span>
+                <p>
+                    SHARDAPALLY, BEHIND-UKHRA ADARSHA HINDI HIGH SCHOOL (H.S.)<br>
+                    PO-UKHRA, DIST-PASCHIM BARDHAMAN (W.B.), PIN-713363
+                </p>
+            </div>
+        </div>
+
+        <nav>
+            <ul id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#fees">Fees</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="./contact.html">Help Desk</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-btn" id="menuBtn" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!------------------------------------------>
+    <!-------Home Seaction------->
+    <!------------------------------------------>
+    <!-- ✅ ID added for header menu -->
+    <section class="home-section" id="home">
+        <!-- LEFT IMAGE SLIDER -->
+        <div class="slider-container" id="sliderBox">
+            <button class="arrow left" id="prevBtn">&#10094;</button>
+
+            <div class="slider-viewport">
+                <div class="slides" id="slides">
+                    <img src="./assets/slide1.jpeg" class="slide" alt="slide 1">
+                    <img src="./assets/pic-1.jpeg" class="slide" alt="slide 2">
+                    <img src="./assets/pic-2.jpeg" class="slide" alt="slide 3">
+                    <img src="./assets/slide4.jpeg" class="slide" alt="slide 4">
+                </div>
+            </div>
+
+            <button class="arrow right" id="nextBtn">&#10095;</button>
+
+            <div class="dots" id="dots"></div>
+            <div class="slider-overlay"></div>
+
+            <div class="slider-footer">COACHING VIEWS</div>
+        </div>
+
+        <!-- NOTICE BOARD -->
+        <div class="notice-container">
+            <div class="notice-header">NOTICE BOARD</div>
+
+            <div class="notice-body" id="noticeBody">
+                <div class="notice-track" id="noticeTrack">
+
+                    <div class="notice">
+                        <a class="notice-link" href="notice.html" target="_blank">
+                            <span class="new-word blink">New!</span>
+                            Provisional Admission Notice for Grades UKG to VIII for the Session 2026 - 2027
+                        </a>
+                        <div class="notice-top">
+                            <span class="date">29-11-2025</span>
+                            <span class="new blink">NEW</span>
+                        </div>
+                    </div>
+
+                    <div class="notice">
+                        <a class="notice-link highlight" href="notice.html" target="_blank">
+                            <span class="new-word blink">New!</span>
+                            Pay Fee For the Session 2025 - 2026
+                        </a>
+                        <div class="notice-top">
+                            <span class="date">07-04-2025</span>
+                            <span class="new blink">NEW</span>
+                        </div>
+                    </div>
+
+                    <div class="notice">
+                        <a class="notice-link" href="notice.html" target="_blank">
+                            A good teacher can inspire hope, ignite the imagination and instill a love of learning.
+                        </a>
+                    </div>
+
+                    <div class="notice">
+                        <a class="notice-link" href="notice.html" target="_blank">
+                            <span class="new-word blink">New!</span>
+                            Admission Open for New Academic Session
+                        </a>
+                        <div class="notice-top">
+                            <span class="date">01-01-2025</span>
+                            <span class="new blink">NEW</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <a href="./notice.html" target="_blank" class="view-all-btn">VIEW ALL</a>
+        </div>
+
+
+    </section>
+
+    <!----------------------------------------->
+    <!--------Buttons--------------->
+    <!----------------------------------------->
+    <section class="quick-links">
+        <a href="./director.html" class="quick-btn red">
+            <span class="icon">🔔</span>
+            <p>Director's Message</p>
+        </a>
+
+        <a href="#" class="quick-btn green">
+            <span class="icon">🖥️</span>
+            <p>Admission</p>
+        </a>
+
+        <a href="#" class="quick-btn coral">
+            <span class="icon">💳</span>
+            <p>Online Fee Payment</p>
+        </a>
+
+        <a href="#" class="quick-btn darkred">
+            <span class="icon">✔️</span>
+            <p>Mandatory Public Disclosure</p>
+        </a>
+    </section>
+
+    <!----------------------------------------->
+    <!--------About Section--------------->
+    <!----------------------------------------->
+    <!-- ✅ ID added for header menu -->
+    <section class="info-cards" id="about">
+
+        <!-- Card 1 -->
+        <div class="info-card">
+            <h2 class="info-title">ABOUT OUR COACHING</h2>
+
+            <div class="info-img">
+                <img src="./assets/school.jpg" alt="About our coaching">
+            </div>
+
+            <div class="info-text" data-collapsed="true">
+                <p>
+                    DAV Model School, Durgapur (W.B.) situated in the heart of Durgapur Steel Township had its humble
+                    beginning on
+                    11th March, 1975 in 3 rooms with 45 students and 3 teachers. Over the years it has burgeoned into an
+                    institution
+                    of excellence with about 5000 students, 115 faculty members & 35 supporting staff paving its way
+                    today to stand
+                    tall and proud to...
+                </p>
+            </div>
+
+            <a class="info-btn" href="./coaching.html">READ MORE</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="info-card">
+            <h2 class="info-title">DIRECTOR MESSAGE</h2>
+
+            <div class="info-img">
+                <img src="./assets/Director.jpeg" alt="Director message">
+            </div>
+
+            <div class="info-text" data-collapsed="true">
+                <p>
+                    Education in the true sense is based on the premise that each person finds identity, meaning and
+                    purpose in life.
+                    It calls forth an intrinsic reverence for life and a passionate love for learning. Thus we at DAV
+                    Model School,
+                    Durgapur are committed to providing the young learners a stimulating & purposeful environment
+                    conducive to their...
+                </p>
+            </div>
+
+            <a class="info-btn" href="./director.html">READ MORE</a>
+        </div>
+
+    </section>
+
+    <!-- ✅ Placeholder sections so header links work (you can fill later) -->
+    <section id="achievements"></section>
+    <section id="fees"></section>
+    <section id="helpdesk"></section>
+
+    <!----------------------------------------->
+    <!--------Gallery Section--------------->
+    <!----------------------------------------->
+    <section class="photo-gallery" id="gallery">
+        <div class="gallery-inner">
+            <h2 class="gallery-title">PHOTO GALLERY</h2>
+
+            <div class="gallery-carousel" id="galleryCarousel">
+                <!-- Left arrow (start pe hide hoga) -->
+                <button class="g-nav g-prev" type="button" aria-label="Previous">‹</button>
+
+                <div class="g-viewport">
+                    <div class="g-track">
+                        <!-- ✅ Apni images yaha change karna -->
+                        <div class="g-slide">
+                            <div class="g-imgwrap">
+                                <img src="./assets/slide1.jpeg" alt="Gallery 1">
+                            </div>
+                        </div>
+
+                        <div class="g-slide">
+                            <div class="g-imgwrap">
+                                <img src="./assets/pic-1.jpeg" alt="Gallery 2">
+                            </div>
+                        </div>
+
+                        <div class="g-slide">
+                            <div class="g-imgwrap">
+                                <img src="./assets/pic-2.jpeg" alt="Gallery 3">
+                            </div>
+                        </div>
+
+                        <div class="g-slide">
+                            <div class="g-imgwrap">
+                                <img src="./assets/pic-3.jpeg" alt="Gallery 4">
+                            </div>
+                        </div>
+
+                        <!-- add more if you want -->
+                        <!-- <div class="g-slide"><div class="g-imgwrap">
+            <img src="./assets/yourimage.jpeg" alt="Gallery 5">
+          </div></div> -->
+                    </div>
+                </div>
+
+                <!-- Right arrow (end pe hide hoga) -->
+                <button class="g-nav g-next" type="button" aria-label="Next">›</button>
+
+                <div class="g-dots" aria-label="Gallery pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------------------->
+    <!--------Footer Section--------------->
+    <!----------------------------------------->
+
+    <footer class="site-footer" id="footer">
+        <div class="footer-inner">
+
+            <!-- CONTACT US -->
+            <section class="footer-col acc" data-acc="contact">
+                <button class="footer-title acc-btn" type="button" aria-expanded="true" aria-controls="acc-contact">
+                    CONTACT US <span class="chev">↓</span>
+                </button>
+
+                <div class="footer-card acc-panel" id="acc-contact">
+                    <p class="contact-name">CAREER POINT, UKHRA</p>
+
+                    <p class="contact-lines">
+                        SHARDAPALLY, BEHIND-UKHRA ADARSHA HINDI HIGH SCHOOL (H.S.)<br>
+                        PO-UKHRA, DIST-PASCHIM BARDHAMAN (W.B.), PIN-713363
+                    </p>
+
+                    <p class="contact-lines">
+                        <b>Contact:</b> 0343-2563500 / 2564711<br>
+                        <b>E-Mail Id:</b> careerpointukhra@gmail.com
+                    </p>
+
+                    <div class="social-block">
+                        <div class="like-us">Like Us on:</div>
+
+                        <div class="social-icons">
+                            <a class="soc fb" href="https://facebook.com" target="_blank" rel="noopener"
+                                aria-label="Facebook">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M14 8.5V7c0-.83.67-1.5 1.5-1.5H17V3h-2.2C12.7 3 11 4.7 11 6.8v1.7H9v3h2V21h3v-9.5h2.5l.5-3H14z" />
+                                </svg>
+                            </a>
+
+                            <a class="soc ig" href="https://instagram.com" target="_blank" rel="noopener"
+                                aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.8 6.2a.9.9 0 1 1-.9.9.9.9 0 0 1 .9-.9z" />
+                                </svg>
+                            </a>
+
+                            <a class="soc yt" href="https://youtube.com" target="_blank" rel="noopener"
+                                aria-label="YouTube">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.9 4.6 12 4.6 12 4.6s-5.9 0-7.5.5A3 3 0 0 0 2.4 7.2 31.5 31.5 0 0 0 2 12a31.5 31.5 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.6.5 7.5.5 7.5.5s5.9 0 7.5-.5a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 22 12a31.5 31.5 0 0 0-.4-4.8zM10 15.5v-7l6 3.5-6 3.5z" />
+                                </svg>
+                            </a>
+
+                            <a class="soc x" href="https://x.com" target="_blank" rel="noopener" aria-label="X">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M18.6 2H21l-6.6 7.6L22 22h-6.2l-4.8-6.2L5.6 22H3l7.2-8.3L2 2h6.3l4.3 5.7L18.6 2zm-1.1 18h1.4L6.4 3.9H4.9L17.5 20z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- QUICK LINKS -->
+            <section class="footer-col acc" data-acc="links">
+                <button class="footer-title acc-btn" type="button" aria-expanded="true" aria-controls="acc-links">
+                    QUICK LINKS <span class="chev">↓</span>
+                </button>
+
+                <div class="footer-card links-card acc-panel" id="acc-links">
+                    <a class="quick-link" href="index.html#about">ABOUT</a>
+                    <a class="quick-link" href="index.html#achievements">ACHIEVEMENT</a>
+                    <a class="quick-link" href="index.html#gallery">PHOTO GALLERY</a>
+                    <a class="quick-link" href="transfer-certificate.html">TRANSFER CERTIFICATE</a>
+                    <a class="quick-link" href="new-voter-form.html">APPLICATION FORM TO BE A NEW VOTER</a>
+                </div>
+            </section>
+
+            <!-- LOCATION MAP -->
+            <section class="footer-col acc" data-acc="map">
+                <button class="footer-title acc-btn" type="button" aria-expanded="true" aria-controls="acc-map">
+                    LOCATION MAP <span class="chev">↓</span>
+                </button>
+
+                <!-- ✅ Map fixed: always same (no current location change) -->
+                <div class="footer-card map-card acc-panel" id="acc-map">
+                    <iframe title="Location Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        src="https://maps.google.com/maps?q=Ukhra%20West%20Bengal&t=m&z=14&output=embed"></iframe>
+                </div>
+            </section>
+        </div>
+
+        <!-- ✅ Scroll to top -->
+        <button class="to-top" id="toTop" type="button" aria-label="Scroll to top">↑</button>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+            <div class="bottom-inner">
+                <span>© <span id="year"></span> CAREER POINT, UKHRA. All rights reserved</span>
+                <span class="visitor">| Total Visitor: <b id="visitorCount">846953</b></span>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
